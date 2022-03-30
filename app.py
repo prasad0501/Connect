@@ -52,14 +52,14 @@ def database_download(filename):
         return response 
     return send_file(filename, mimetype='zip', attachment_filename=filename, as_attachment=True)
 
-@app.route('/data1',methods=['POST'])
+@app.route('/data1',methods=['GET','POST'])
 def data1():
     data()
     #return send_file('Test.zip', mimetype='zip', attachment_filename='Test.zip', as_attachment=True)
     #return render_template('data.html')
     return render_template('data.html', filename='Test.zip')
 
-@app.route('/data',methods=['POST'])
+@app.route('/data',methods=['GET','POST'])
 def data():
     if request.method=='POST':
         # f=request.form['tdd']
