@@ -33,7 +33,7 @@ from werkzeug.wrappers import Response
 
 app=Flask(__name__)
 UPLOAD_PATH = os.getcwd()
-UPLOAD_PATH=UPLOAD_PATH+'\\'
+UPLOAD_PATH=UPLOAD_PATH+'/'
 DATABASE_URL = os.environ.get('DATABASE_URL', '')
 
 
